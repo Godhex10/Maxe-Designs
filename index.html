@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Maxe Designs Packages</title>
+<meta name="description" content="Short-form video editing and graphic design packages for businesses, from ₦10,000. Pay on selfany.">
+<!-- Target: responsive web. Fonts: Bricolage Grotesque (display), Figtree (body) via Google Fonts. No other dependencies. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Concept: a warm, light studio sheet. Type does the talking; the one memorable thing is the hero stage where a phone video sits among the flyer, palette, posts and plan it comes with. */
+:root{
+  --bg:#fff8f1; --surface:#ffffff; --surface-2:#fdeadc; --ink:#2b1810; --muted:#6f5648;
+  --line:#f1dccb; --accent:#c9400d; --accent-ink:#ffffff; --accent-soft:#ffe5d3;
+  --wash-a:rgba(255,128,64,.22); --wash-b:rgba(255,190,100,.24); --wash-c:rgba(255,120,110,.12);
+  --shadow:0 1px 2px rgba(120,50,10,.06),0 10px 30px -12px rgba(120,50,10,.20);
+  --shadow-lg:0 2px 4px rgba(120,50,10,.06),0 30px 60px -24px rgba(150,60,10,.38);
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r-lg:24px; --r-md:16px; --gutter:20px;
+  color-scheme:light;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+ul,ol{margin:0;padding:0;list-style:none}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:100%;max-width:1160px;margin-inline:auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+section{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.lede{color:var(--muted);font-size:1.125rem;max-width:56ch}
+.sec-head{display:grid;gap:.9rem;margin-bottom:clamp(2rem,4vw,3.25rem)}
+.sec-head h2{font-size:clamp(1.85rem,3.8vw,2.9rem);max-width:20ch}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;font:600 1rem/1 var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 10px 24px -10px var(--accent)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 14px 28px -10px var(--accent)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:var(--surface)}
+.btn-block{width:100%}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.1rem}
+.brand{font-family:var(--display);font-weight:700;font-size:1.2rem;letter-spacing:-.02em;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem}
+.brand i{width:.7rem;height:.7rem;border-radius:50%;background:var(--accent);display:inline-block}
+.nav ul{display:none;gap:1.75rem;font-weight:500;color:var(--muted)}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:var(--ink)}
+.nav .btn{min-height:42px;padding:.55rem 1.1rem;font-size:.95rem}
+@media (min-width:820px){.nav ul{display:flex}}
+
+/* hero */
+.hero{position:relative;padding-block:clamp(1.5rem,4vw,3rem) clamp(3rem,7vw,5.5rem)}
+.hero::before{content:"";position:absolute;inset:-6rem 0 -3rem;pointer-events:none;z-index:0;-webkit-mask-image:linear-gradient(#000 72%,transparent);mask-image:linear-gradient(#000 72%,transparent);
+  background:radial-gradient(40rem 28rem at 78% 20%,var(--wash-a),transparent 70%),radial-gradient(34rem 24rem at 8% 60%,var(--wash-b),transparent 70%),radial-gradient(30rem 22rem at 55% 100%,var(--wash-c),transparent 70%)}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:3rem;align-items:center}
+@media (min-width:920px){.hero .wrap{grid-template-columns:1.05fr .95fr;gap:2rem}}
+.hero h1{font-size:clamp(2.5rem,6vw,4.25rem);max-width:15ch}
+.hero .lede{margin-top:1.25rem;font-size:clamp(1.05rem,1.6vw,1.25rem)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:2rem;color:var(--muted);font-size:.975rem}
+.facts li{display:inline-flex;align-items:center;gap:.5rem}
+.facts li::before{content:"";width:.45rem;height:.45rem;border-radius:50%;background:var(--accent)}
+
+/* hero stage */
+.stage{position:relative;width:min(100%,480px);aspect-ratio:1/1.04;margin-inline:auto;container-type:inline-size}
+.phone{position:absolute;left:50%;top:2%;width:46cqw;aspect-ratio:9/18.4;transform:translateX(-50%);border-radius:7.5cqw;background:#2b1810;padding:1.5cqw;box-shadow:var(--shadow-lg)}
+.screen{position:relative;width:100%;height:100%;border-radius:6cqw;overflow:hidden;background:linear-gradient(165deg,#c9400d 0%,#ee6a2b 38%,#f58a3c 100%)}
+.screen::before{content:"";position:absolute;width:62%;aspect-ratio:1;left:19%;top:20%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff1d6,#ffc27a 60%,#f58a3c)}
+.screen::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,transparent,rgba(43,24,16,.55))}
+.notch{position:absolute;left:50%;top:2.4cqw;width:11cqw;height:2.6cqw;border-radius:2cqw;background:#2b1810;transform:translateX(-50%);z-index:3}
+.play{position:absolute;z-index:2;left:50%;top:41%;width:11cqw;height:11cqw;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center}
+.play::after{content:"";margin-left:.9cqw;border-style:solid;border-width:2.2cqw 0 2.2cqw 3.6cqw;border-color:transparent transparent transparent #c9400d}
+.cap{position:absolute;z-index:2;left:6%;right:6%;bottom:13%;color:#fff;font:700 3.5cqw/1.25 var(--display);text-align:center}
+.cap span{display:inline-block;padding:.9cqw 2cqw;border-radius:1.6cqw;background:rgba(43,24,16,.55);backdrop-filter:blur(4px)}
+.bar{position:absolute;z-index:2;left:6%;right:6%;bottom:6%;height:.9cqw;border-radius:1cqw;background:rgba(255,255,255,.35)}
+.bar::after{content:"";position:absolute;inset:0 62% 0 0;border-radius:inherit;background:#fff}
+.chip{position:absolute;z-index:2;background:var(--surface);border:1px solid var(--line);border-radius:3.2cqw;padding:2cqw;box-shadow:var(--shadow);transform:rotate(var(--r,0deg));animation:settle .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0s)}
+@keyframes settle{from{transform:rotate(var(--r,0deg)) translateY(16px)}to{transform:rotate(var(--r,0deg)) translateY(0)}}
+.chip small{display:block;font:600 2.5cqw/1.2 var(--body);color:var(--muted);margin-top:1.4cqw}
+.flyer{left:-1%;top:15%;width:27cqw;--r:-5deg;--d:.05s}
+.flyer .hd{height:12cqw;border-radius:2cqw;background:linear-gradient(135deg,#c9400d,#f58a3c);display:grid;place-items:center;color:#fff;font:700 2.7cqw/1.1 var(--display);text-align:center;padding:0 1cqw}
+.flyer .ln{height:1.1cqw;border-radius:1cqw;background:var(--line);margin-top:1.6cqw}.flyer .ln.s{width:60%}
+.flyer .pill{margin-top:2cqw;height:3.4cqw;width:44%;border-radius:2cqw;background:var(--accent)}
+.palette{left:-1%;bottom:4%;width:31cqw;--r:3deg;--d:.2s}
+.palette .sw{display:flex}.palette .sw i{width:4.8cqw;height:4.8cqw;border-radius:50%;border:.5cqw solid var(--surface);margin-right:-1cqw}
+.posts{right:-1%;top:19%;width:28cqw;--r:4deg;--d:.12s}
+.posts .g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.posts .g i{aspect-ratio:1;border-radius:1.6cqw}
+.plan{right:-1%;bottom:2%;width:32cqw;--r:-3deg;--d:.28s}
+.plan .g{display:grid;grid-template-columns:repeat(7,1fr);gap:1cqw}
+.plan .g i{aspect-ratio:1;border-radius:50%;background:var(--surface-2)}
+.plan .g i.on{background:var(--accent)}
+
+/* made-for strip */
+.madefor{padding-block:0 clamp(2.5rem,5vw,4rem)}
+.madefor .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+.madefor p{color:var(--muted);font-weight:500;margin-right:.5rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.tags li{padding:.4rem .9rem;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.95rem;font-weight:500}
+
+/* included */
+.grid3{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.6rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.75rem;min-width:0}
+.card .ico{width:2.75rem;height:2.75rem;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:.25rem}
+.card h3{font-size:1.3rem;letter-spacing:-.015em}
+.card p{color:var(--muted);font-size:1rem}
+.card .where{margin-top:auto;padding-top:.5rem;font-size:.9rem;font-weight:600;color:var(--accent)}
+.ic{width:1.35rem;height:1.35rem;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* steps */
+.steps{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));counter-reset:step}
+.steps li{counter-increment:step;position:relative;background:var(--surface-2);border-radius:var(--r-lg);padding:1.6rem;display:grid;gap:.5rem;align-content:start}
+.steps li::before{content:counter(step);font:700 2.4rem/1 var(--display);color:var(--accent);letter-spacing:-.04em;margin-bottom:.6rem}
+.steps h3{font-size:1.2rem;letter-spacing:-.01em}
+.steps p{color:var(--muted);font-size:1rem}
+
+/* plans */
+.plans{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));align-items:stretch}
+.plan-card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.6rem;display:flex;flex-direction:column;gap:1rem;box-shadow:var(--shadow);min-width:0}
+.plan-card.best{border:2px solid var(--accent);box-shadow:0 0 0 6px var(--accent-soft),var(--shadow-lg)}
+.badge{position:absolute;top:-.8rem;left:1.4rem;background:var(--accent);color:var(--accent-ink);font-size:.82rem;font-weight:600;padding:.25rem .75rem;border-radius:999px}
+.plan-card h3{font-size:1.35rem}
+.price{font:700 2.35rem/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.for{color:var(--muted);font-size:.975rem;min-height:3em}
+.tick{display:grid;gap:.6rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.98rem}
+.tick li{position:relative;padding-left:1.7rem}
+.tick li::before{content:"";position:absolute;left:0;top:.28em;width:1.1rem;height:1.1rem;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat}
+.deliver{margin-top:auto;display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.95rem;font-weight:500;padding-top:.25rem}
+.deliver .ic{width:1.1rem;height:1.1rem}
+.note{margin-top:1.5rem;color:var(--muted);font-size:.95rem;max-width:70ch}
+
+/* compare */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow)}
+table{width:100%;min-width:640px;border-collapse:collapse;font-size:.98rem}
+th,td{padding:.9rem 1rem;text-align:center;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+th:first-child,td:first-child{text-align:left;font-weight:500}
+thead th{font:700 1rem var(--display);background:var(--surface-2);letter-spacing:-.01em}
+thead th small{display:block;font:500 .85rem var(--body);color:var(--muted)}
+tbody tr:last-child td{border-bottom:0}
+td.y{color:var(--accent);font-weight:700}
+td.n{color:var(--muted);opacity:.6}
+th.hl,td.hl{background:var(--accent-soft)}
+thead th.hl{background:var(--accent-soft)}
+
+/* faq */
+.faq{display:grid;gap:.75rem;max-width:820px;margin-inline:auto}
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:0 1.25rem}
+summary{cursor:pointer;list-style:none;position:relative;display:flex;justify-content:center;align-items:center;text-align:center;padding:1.1rem 2.25rem;font-weight:600;min-height:48px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:50%;margin-top:-.75rem;font:500 1.5rem/1 var(--body);color:var(--accent);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding-bottom:1.2rem;max-width:62ch;margin-inline:auto;text-align:center}
+#faq .sec-head{justify-items:center;text-align:center}
+
+/* closing */
+.closing .box{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:32px;padding:clamp(2rem,6vw,4.5rem);box-shadow:var(--shadow-lg);display:grid;gap:1.25rem;justify-items:center;text-align:center}
+.closing .box::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(30rem 20rem at 90% 0%,var(--wash-a),transparent 70%),radial-gradient(24rem 18rem at 0% 100%,var(--wash-b),transparent 70%)}
+.closing .box>*{position:relative}
+.closing h2{font-size:clamp(2rem,4.6vw,3.4rem);max-width:16ch}
+.closing .cta-row{justify-content:center}
+footer{padding-block:2rem 3rem;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem 2rem}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="3"/><path d="M16 10.5l5-2.5v8l-5-2.5"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9l1.5-4.5h13L20 9"/><path d="M4 9a2.7 2.7 0 005.3 0 2.7 2.7 0 005.4 0A2.7 2.7 0 0020 9"/><path d="M5.5 12v7.5h13V12"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="M4 17l5-4.5 4 3.5 3-2.5 4.5 4"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 100 17c1.3 0 2-.9 1.6-2-.5-1.3.3-2.5 1.7-2.5H17a3.5 3.5 0 003.5-3.5C20.5 7 16.8 3.5 12 3.5z"/><circle cx="7.8" cy="11" r="1"/><circle cx="10.5" cy="7.5" r="1"/><circle cx="15" cy="8" r="1"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L10.5 13.5"/><path d="M21 3l-6.5 18-4-7.5L3 9.5 21 3z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+</svg>
+
+<header class="wrap nav">
+  <a class="brand" href="#top"><i></i>Maxe Designs</a>
+  <ul>
+    <li><a href="#included">What you get</a></li>
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#plans">Plans</a></li>
+    <li><a href="#faq">Questions</a></li>
+  </ul>
+  <a class="btn btn-primary" href="#plans">See plans</a>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Videos and design for your business, delivered in days</h1>
+        <p class="lede">Send us your footage. We edit it into short videos and design the flyers, posts and brand basics that go with it. Four plans, from ₦10,000.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#plans">See the plans</a>
+          <a class="btn btn-ghost" href="#included">What's included</a>
+        </div>
+        <ul class="facts">
+          <li>Delivered in 1 to 5 days</li>
+          <li>Edited from your own footage</li>
+          <li>Pay securely on selfany</li>
+        </ul>
+      </div>
+
+      <div class="stage" role="img" aria-label="A short video on a phone, surrounded by a promo flyer, brand colors, designed posts and a content plan">
+        <div class="phone">
+          <div class="screen">
+            <span class="notch"></span>
+            <span class="play"></span>
+            <p class="cap"><span>Fresh batch, out today</span></p>
+            <span class="bar"></span>
+          </div>
+        </div>
+        <div class="chip flyer"><div class="hd">Weekend sale</div><div class="ln"></div><div class="ln s"></div><div class="pill"></div><small>Promo flyer</small></div>
+        <div class="chip posts"><div class="g"><i style="background:#c9400d"></i><i style="background:#ffc27a"></i><i style="background:#f6c9a8"></i><i style="background:#2b1810"></i></div><small>Post designs</small></div>
+        <div class="chip palette"><div class="sw"><i style="background:#c9400d"></i><i style="background:#f58a3c"></i><i style="background:#2b1810"></i><i style="background:#ffe1cc"></i><i style="background:#f6c9a8"></i></div><small>Brand colors</small></div>
+        <div class="chip plan"><div class="g"><i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i><i></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i></div><small>2-week plan</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="madefor">
+    <div class="wrap">
+      <p>Made for</p>
+      <ul class="tags">
+        <li>Fashion brands</li><li>Beauty and hair</li><li>Restaurants and food</li><li>Skincare and products</li><li>Real estate</li><li>Personal brands</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="included">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Everything your content needs, in one place</h2>
+        <p class="lede">Most businesses juggle an editor, a designer and a content calendar. Here it comes together, so your page looks like one brand.</p>
+      </div>
+      <div class="grid3">
+        <article class="card">
+          <span class="ico"><svg class="ic"><use href="#i-video"/></svg></span>
+          <h3>Short-form videos</h3>
+          <p>Vertical videos edited from your footage, with a caption and hashtags ready to post. Basic also includes a hook idea to open the video.</p>
+          <span class="where">Every plan</span>
+        </article>
+        <article class="card">
+          <span class="ico"><svg class="ic"><use href="#i-store"/></svg></span>
+          <h3>Business or product video</h3>
+          <p>A dedicated video that shows off your business or your product, made to sit beside your short clips.</p>
+          <span class="where">Premium</span>
+        </article>
+        <article class="card">
+          <span class="ico"><svg class="ic"><use href="#i-image"/></svg></span>
+          <h3>Flyers and post designs</h3>
+          <p>A branded video cover, a promo flyer, or designed social posts that match your videos, depending on the plan.</p>
+          <span class="where">Every plan</span>
+        </article>
+        <article class="card">
+          <span class="ico"><svg class="ic"><use href="#i-palette"/></svg></span>
+          <h3>Brand basics</h3>
+          <p>A color palette and font recommendation, and with Premium a mini brand kit: logo cleanup or a simple logo, plus a profile picture and highlight covers.</p>
+          <span class="where">Basic and up</span>
+        </article>
+        <article class="card">
+          <span class="ico"><svg class="ic"><use href="#i-cal"/></svg></span>
+          <h3>A content plan</h3>
+          <p>Know what to post and when. Growth gives you a 2-week plan, and Premium gives you a monthly plan.</p>
+          <span class="where">Growth and Premium</span>
+        </article>
+        <article class="card">
+          <span class="ico"><svg class="ic"><use href="#i-send"/></svg></span>
+          <h3>Posting on your page</h3>
+          <p>We post your videos and designed posts for you, so the work goes live without you having to do it.</p>
+          <span class="where">Premium</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>From payment to finished files in four steps</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Pick a plan</h3><p>Choose the plan that fits and pay on selfany. Your payment confirms your order.</p></li>
+        <li><h3>Send your files</h3><p>Share your raw video clips, your business name or logo, and a short note on what you want to promote.</p></li>
+        <li><h3>We edit and design</h3><p>Your videos get cut and captioned, and your flyers, posts and brand pieces get designed to match.</p></li>
+        <li><h3>Receive and post</h3><p>Your finished files arrive within the plan's delivery time, counted from payment and your footage.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="plans" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Pick the plan that fits your business</h2>
+        <p class="lede">Each plan opens on selfany, where you pay and place your order.</p>
+      </div>
+      <div class="plans">
+        <article class="plan-card">
+          <h3>Starter</h3>
+          <p class="price">₦10,000</p>
+          <p class="for">Try our work before committing to a bigger plan.</p>
+          <ul class="tick">
+            <li>1 edited short-form video, up to 45 seconds</li>
+            <li>Caption and hashtags, ready to post</li>
+            <li>1 branded video cover</li>
+          </ul>
+          <p class="deliver"><svg class="ic"><use href="#i-clock"/></svg>Delivered in 1 day</p>
+          <a class="btn btn-ghost btn-block" href="https://selfany.com/2ERPPYEDWI" target="_blank" rel="noopener" data-plan="starter">Choose Starter</a>
+        </article>
+
+        <article class="plan-card">
+          <h3>Basic</h3>
+          <p class="price">₦20,000</p>
+          <p class="for">Small shops and personal brands that post now and then.</p>
+          <ul class="tick">
+            <li>1 edited short-form video</li>
+            <li>Caption, hashtags and 1 hook idea</li>
+            <li>1 promo flyer</li>
+            <li>A simple brand color palette</li>
+          </ul>
+          <p class="deliver"><svg class="ic"><use href="#i-clock"/></svg>Delivered in 2 days</p>
+          <a class="btn btn-ghost btn-block" href="https://selfany.com/2ERPPYEDWI" target="_blank" rel="noopener" data-plan="basic">Choose Basic</a>
+        </article>
+
+        <article class="plan-card">
+          <h3>Growth</h3>
+          <p class="price">₦35,000</p>
+          <p class="for">Fashion, beauty, food and skincare brands that want steady content.</p>
+          <ul class="tick">
+            <li>1 edited short-form video</li>
+            <li>3 social media post designs</li>
+            <li>2-week content plan</li>
+            <li>Captions and hashtags for every post</li>
+            <li>Color palette and font recommendation</li>
+          </ul>
+          <p class="deliver"><svg class="ic"><use href="#i-clock"/></svg>Delivered in 3 to 4 days</p>
+          <a class="btn btn-ghost btn-block" href="https://selfany.com/2ERPPYEDWI" target="_blank" rel="noopener" data-plan="growth">Choose Growth</a>
+        </article>
+
+        <article class="plan-card best">
+          <span class="badge">Best value</span>
+          <h3>Premium</h3>
+          <p class="price">₦50,000</p>
+          <p class="for">Brands that want videos, design and planning handled in one place.</p>
+          <ul class="tick">
+            <li>1 short-form video and 1 business or product video</li>
+            <li>Monthly content plan</li>
+            <li>Mini brand kit: logo, colors and fonts</li>
+            <li>3 designed posts or flyers</li>
+            <li>Profile picture and highlight covers</li>
+            <li>Captions and hashtags, plus posting on your page</li>
+          </ul>
+          <p class="deliver"><svg class="ic"><use href="#i-clock"/></svg>Delivered in 5 days</p>
+          <a class="btn btn-primary btn-block" href="https://selfany.com/2ERPPYEDWI" target="_blank" rel="noopener" data-plan="premium">Choose Premium</a>
+        </article>
+      </div>
+      <p class="note">Delivery time is counted from when we receive your payment and your footage.</p>
+    </div>
+  </section>
+
+  <section id="compare" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Compare the plans side by side</h2>
+      </div>
+      <div class="tablewrap" tabindex="0" role="region" aria-label="Plan comparison table">
+        <table>
+          <thead>
+            <tr><th scope="col">What you get</th><th scope="col">Starter<small>₦10,000</small></th><th scope="col">Basic<small>₦20,000</small></th><th scope="col">Growth<small>₦35,000</small></th><th scope="col" class="hl">Premium<small>₦50,000</small></th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Short-form video</td><td>1</td><td>1</td><td>1</td><td class="hl">1</td></tr>
+            <tr><td>Business or product video</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="hl y">1</td></tr>
+            <tr><td>Caption and hashtags</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="hl y">✓</td></tr>
+            <tr><td>Hook idea</td><td class="n">–</td><td class="y">✓</td><td class="n">–</td><td class="hl n">–</td></tr>
+            <tr><td>Branded video cover</td><td class="y">✓</td><td class="n">–</td><td class="n">–</td><td class="hl n">–</td></tr>
+            <tr><td>Promo flyer</td><td class="n">–</td><td class="y">✓</td><td class="n">–</td><td class="hl n">–</td></tr>
+            <tr><td>Designed posts</td><td class="n">–</td><td class="n">–</td><td>3</td><td class="hl">3 (posts or flyers)</td></tr>
+            <tr><td>Color palette</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td><td class="hl y">✓</td></tr>
+            <tr><td>Font recommendation</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td><td class="hl y">✓</td></tr>
+            <tr><td>Mini brand kit and logo cleanup</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="hl y">✓</td></tr>
+            <tr><td>Profile picture and highlight covers</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="hl y">✓</td></tr>
+            <tr><td>Content plan</td><td class="n">–</td><td class="n">–</td><td>2-week</td><td class="hl">Monthly</td></tr>
+            <tr><td>Posting on your page</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="hl y">✓</td></tr>
+            <tr><td>Delivery</td><td>1 day</td><td>2 days</td><td>3 to 4 days</td><td class="hl">5 days</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Questions people ask first</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Do I need to have my own footage?</summary>
+          <p>Yes. These plans edit the clips you send us, so you'll need raw video of your business, product or team. Footage from a phone is fine.</p>
+        </details>
+        <details>
+          <summary>What do you need from me after I pay?</summary>
+          <p>Your raw video clips, your business name or logo, and a short note on what the video should promote. For Growth, add a short brief on your business and audience. For Premium, add access to your page so we can post, and a brief on your goals.</p>
+        </details>
+        <details>
+          <summary>How long does it take?</summary>
+          <p>Starter takes 1 day, Basic 2 days, Growth 3 to 4 days and Premium 5 days. The clock starts when we have both your payment and your footage.</p>
+        </details>
+        <details>
+          <summary>Which plan should I choose?</summary>
+          <p>Start with Starter if you want to see our work first. Choose Basic if you also need a flyer, and Growth if you want a plan for what to post. Pick Premium if you want a brand kit, a business video and someone to post for you.</p>
+        </details>
+        <details>
+          <summary>Do you post on my page for me?</summary>
+          <p>Only in the Premium plan. In the other plans you get the finished files and post them yourself.</p>
+        </details>
+        <details>
+          <summary>How do I pay?</summary>
+          <p>Every plan button opens on selfany, where you pay and place your order.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" style="padding-top:0">
+    <div class="wrap">
+      <div class="box">
+        <h2>Choose a plan and send your footage</h2>
+        <p class="lede">Your first finished video can be ready in a day.</p>
+        <div class="cta-row" style="margin-top:.5rem">
+          <a class="btn btn-primary" href="#plans">See the plans</a>
+          <a class="btn btn-ghost" href="https://selfany.com/2ERPPYEDWI" target="_blank" rel="noopener" data-plan="starter">Start with Starter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Maxe Designs</span>
+    <span>Payments are handled securely on selfany.</span>
+  </div>
+</footer>
+
+<script>
+/* Paste your selfany links here. Any plan left empty uses the store link; if that is empty too, the button scrolls to the plans. */
+var SELFANY = {
+  store: "https://selfany.com/2ERPPYEDWI",
+  starter: "",
+  basic: "",
+  growth: "",
+  premium: ""
+};
+document.querySelectorAll("[data-plan]").forEach(function (a) {
+  var url = SELFANY[a.dataset.plan] || SELFANY.store;
+  if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
+});
+</script>
+
+</body>
+</html>
